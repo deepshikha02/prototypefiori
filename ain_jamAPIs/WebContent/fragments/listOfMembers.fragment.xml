@@ -1,0 +1,14 @@
+<Dialog xmlns:core="sap.ui.core" xmlns="sap.m" title="Members">
+	<List items="{/listOfMembers}">
+		<items>
+			<StandardListItem title="{fullName}" description="{email}">
+			</StandardListItem>
+		</items>
+	</List>
+	<beginButton>
+		<Button text="Add Members" press="onPressOpenInviteMembersDialog"></Button>
+	</beginButton>
+	<endButton>
+		<Button text="Cancel" press="onPressHandleClose"></Button>
+	</endButton>
+</Dialog>

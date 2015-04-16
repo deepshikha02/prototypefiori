@@ -1,0 +1,45 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:unified="sap.ui.unified"
+	controllerName="ain_jamapis.collaboration_page" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="New Collaboration" width="50%">
+		<content>
+			<layout:VerticalLayout id="pageCollaborationVerticallayout"
+				width="100%">
+				<layout:content>
+					<Label text="Topic"></Label>
+					<Input type="Text" id="groupName" placeholder="What is the collaboration about?"></Input>
+					<Label text="Goal"></Label>
+					<Input type="Text" id="groupDescription" placeholder="What is the goal of the collaboration?"></Input>
+					<Label text="Security Level"></Label>
+					<ActionSelect id="securityLevelActionSelect" items="{/securityLevelData}">
+						<items>
+							<core:Item key="{levelKey}" text="{levelName}"></core:Item>
+						</items>
+					</ActionSelect>
+					<!-- <Label text="Due Date"></Label> <DatePicker value="2015-04-14" 
+						valueFormat="dd-mmm-yyyy" displayFormat="long"></DatePicker> -->
+					<Panel expandable="true" expanded="false">
+						<headerToolbar>
+							<Toolbar>
+								<Text text="Participants"></Text>
+								<ToolbarSpacer></ToolbarSpacer>
+								<Button icon="sap-icon://add" press="onPressOpenAddParticipantDialog"></Button>
+							</Toolbar>
+						</headerToolbar>
+						<content>
+							<Text text="List of participants goes here"></Text>
+						</content>
+					</Panel>
+				</layout:content>
+			</layout:VerticalLayout>
+		</content>
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer></ToolbarSpacer>
+				<Button text="Create" press="onPressCreateGroup"></Button>
+				<Button text="Cancel"></Button>
+				<Button text="All Groups" press="onPressGetAllGroups"></Button>
+			</Toolbar>
+		</footer>
+	</Page>
+</core:View>

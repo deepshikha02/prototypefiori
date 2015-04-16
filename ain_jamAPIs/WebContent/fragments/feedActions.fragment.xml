@@ -1,0 +1,10 @@
+<Dialog xmlns:core="sap.ui.core" xmlns="sap.m" title="Select action to perform">
+	<SegmentedButton>
+        <Button icon="sap-icon://response" text="Replies" press="onPressShowReplies"></Button>
+        <Button icon="sap-icon://add-favorite" text="Likes" press="onPressShowLikes"></Button>
+        <Button icon="sap-icon://share-2" text="Shares" press="onPressShowShares"></Button>
+      </SegmentedButton>
+      <endButton>
+      	<Button text="Close" press="onPressHandleClose"></Button>
+      </endButton>
+</Dialog>

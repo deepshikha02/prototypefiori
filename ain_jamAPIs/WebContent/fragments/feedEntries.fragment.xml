@@ -1,0 +1,12 @@
+<Dialog xmlns:core="sap.ui.core" xmlns="sap.m" title="Feed Entries">
+	<List items="{/feedEntries}" mode="SingleSelectLeft" 
+				selectionChange="onSelectOpenPossibleActionsOnFeeds">
+		<items>
+			<StandardListItem title="{Action}" description="{Title}">
+			</StandardListItem>
+		</items>
+	</List>
+	<endButton>
+		<Button text="Cancel" press="onPressHandleClose"></Button>
+	</endButton>
+</Dialog>
